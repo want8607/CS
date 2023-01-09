@@ -4,11 +4,12 @@ public class ArrayList<E> implements ListInterface<E> {
     private E [] item;
     private int numItems;
     private static final int DEFAULT_CAPACITY = 64;
-    private final int NOT_FOUND = -12345;
+    private final int NOT_FOUND = -125;
 
     public ArrayList() {
         item = (E[]) new Object[DEFAULT_CAPACITY];
         numItems = 0;
+        
     }
 
     public ArrayList(int n) {

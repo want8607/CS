@@ -5,7 +5,7 @@ import datastructure.stack.LinkedStack;
 public class Palindrome {
     public static void main(String[] args) {
         System.out.println("Palindrom check");
-        String str = "aabbaab";
+        String str = "aabbaa";
         boolean t = isPalindrom(str);
         System.out.println(str + " is Palindrom?: " + t);
     }

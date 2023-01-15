@@ -23,7 +23,7 @@ public class Heap<E extends Comparable> implements PQInterface<E> {
 	}
 	
 	
-	public void percolateUp(int i) { // 스며오르기 i에서 부터 힙성질을 만족하도록 수선(재귀적으로 부모노드와 비교하기)
+	public void percolateUp(int i) { // 스며오르기 i에서 부터 힙성질을 만족하도록 수선(재귀적으로 부모노드와 비교하기) O(logn)
 		int parent = (i-1)/2;
 		if (parent >= 0 && A[i].compareTo(A[parent])>0) {
 			E temp = A[i];
@@ -60,7 +60,7 @@ public class Heap<E extends Comparable> implements PQInterface<E> {
 		}
 	}
 	
-	public void buildHeap() {  //무작위 배열을 힙으로 만들기
+	public void buildHeap() {  //무작위 배열을 힙으로 만들기 O(n)
 		if(numItems >= 2) {
 			for(int i =(numItems-2)/2 ; i>= 0 ; i--) { //마지막 노드의 부모 노드 부터 첫번째 노드까지 정리해야함 
 				//2번 노드를 루트로하는 트리가 힙조건을 만족하기 위해서는 
